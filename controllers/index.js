@@ -49,12 +49,21 @@ module.exports.deleteProduct = async (req, res) => {
 
 module.exports.updateProduct = async (req, res) => {
   try {
-    const { number, id } = req.params;
+    const { id,number } = req.params;
     const product = await products.findById(id);
-    product.quantity = product.quantity + number;
+    console.log("number ",typeof number);
+    console.log("Number(number) ",typeof Number(number));
+    console.log("product.quantity ",typeof product.quantity);
+
+    product.quantity = product.quantity + Number(number) ;
     product.save();
     return res.status(200).json({
       message: "Product updated successfully",
+      number:typeof number,
+      Number1:typeof Number(number),    
+      ID:id,
+      productQua:typeof product.quantity,
+
     });
   } catch (error) {
     return res.status(500).json({
