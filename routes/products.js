@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+// importing the controller methods
 const {
   getProduct,
   createProduct,
@@ -7,9 +8,9 @@ const {
   deleteProduct,
 } = require("../controllers/index");
 
-router.get("/", getProduct); //working watch freecodecamp article
-router.post("/update", updateProduct); //working with giving data in form-urlencoded
-router.delete("/:id", deleteProduct); //working watch freecodecamp article directly give Id
-router.post("/create", createProduct); //working with giving data in form-urlencoded
+router.get("/", getProduct); //to get all products
+router.post("/update", updateProduct); //to update one product
+router.delete("/:id", deleteProduct); //to delete one product
+router.post("/create", createProduct); //to create one product
 
 module.exports = router;
