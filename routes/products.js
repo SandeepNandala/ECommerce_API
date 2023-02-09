@@ -8,7 +8,7 @@ const {
 } = require("../controllers/index");
 
 router.get("/", getProduct);//working watch freecodecamp article
-router.post("/:id/update", updateProduct);
+router.post("/update", updateProduct);//working with giving data in form-urlencoded
 router.get("/:id", deleteProduct);//working watch freecodecamp article directly give Id 
 router.post("/create", createProduct);//working with giving data in form-urlencoded
 
