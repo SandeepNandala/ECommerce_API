@@ -9,7 +9,8 @@ const {
 
 router.get("/", getProduct);//working watch freecodecamp article
 router.post("/update", updateProduct);//working with giving data in form-urlencoded
-router.get("/:id", deleteProduct);//working watch freecodecamp article directly give Id 
+// router.get("/:id", deleteProduct);//working watch freecodecamp article directly give Id 
+router.delete("/:id", deleteProduct);//working watch freecodecamp article directly give Id 
 router.post("/create", createProduct);//working with giving data in form-urlencoded
 
 module.exports = router;

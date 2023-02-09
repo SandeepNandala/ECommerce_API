@@ -20,8 +20,8 @@ module.exports.createProduct = async (req, res) => {
     await product.save();
 
     return res.status(200).json({
-      name: "createProduct",
       message: "product created successfully",
+      product:product
     });
   } catch (error) {
     return res.status(500).json({
